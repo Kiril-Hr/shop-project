@@ -4,6 +4,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-image: url(image/patt.png);
 }
 
 .container {
@@ -14,7 +15,10 @@ body {
 }
 
 .header {
-
+    display: flex;
+    height: 100px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.75);
 }
 
 .row {
@@ -36,4 +40,28 @@ body {
 .col-6 {
     flex: 0 0 50%;
     min-width: 50%;
+}
+
+.menu {
+    display: flex;
+
+}
+
+.menu li {
+    width: 25%;
+    border-left: 1px solid #2c71b8;
+}
+
+.menu li:last-child {
+    border-right: 1px solid #2c71b8;
+}
+
+.menu a {
+    display: block;
+    height: 50px;
+    text-decoration: none;
+    font-size: 21px;
+    color: #2c71b8;
+    line-height: 50px;
+    text-align: center;
 }
