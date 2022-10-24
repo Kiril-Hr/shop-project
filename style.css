@@ -44,10 +44,33 @@ body {
 
 .menu {
     display: flex;
-
 }
 
-.menu li {
+.submenu-m {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    display: none;
+}
+
+.submenu > li {
+    width: 283px;
+    height: 40px;
+    background-color: #2c71b8;
+    padding: 12px 0 13px 30px;
+}
+
+.submenu > li > a {
+    color: white;
+}
+
+.submenu-m:hover .submenu {
+    display: block;
+}
+
+.menu > li {
     width: 25%;
     border-left: 1px solid #2c71b8;
 }
