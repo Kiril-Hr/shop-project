@@ -5,7 +5,7 @@ const sliderSq2 = document.querySelector('.slider-square-2')
 const sliderSq3 = document.querySelector('.slider-square-3')
 const sliderSq4 = document.querySelector('.slider-square-4')
 
-document.querySelector('.slider-next').addEventListener('click', function(){
+document.querySelector('.slider-next').addEventListener('click', () => {
     offset += 1200;
     if (offset > 3601) {
         offset = 0;
@@ -13,7 +13,7 @@ document.querySelector('.slider-next').addEventListener('click', function(){
     slider.style.left = -offset + 'px';
 });
 
-document.querySelector('.slider-prev').addEventListener('click', function(){
+document.querySelector('.slider-prev').addEventListener('click', () => {
     offset -= 1200;
     if (offset < 0) {
         offset = 0;
