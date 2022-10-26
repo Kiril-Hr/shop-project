@@ -68,3 +68,7 @@ document.querySelector('.slider-prev').addEventListener('click',function sliderS
         sliderSq4.style.backgroundColor = "white";
     }
 });
+
+
+
+
