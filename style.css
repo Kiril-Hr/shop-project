@@ -7,6 +7,8 @@ body {
     background-image: url(image/patt.png);
 }
 
+/* Start main details of header */
+
 .container {
     width: 1200px;
     max-width: 1200px;
@@ -42,9 +44,15 @@ body {
     min-width: 50%;
 }
 
+/* End main details of header */
+
+/* Start menu of header */
+
 .menu {
     display: flex;
 }
+
+/* Start submenu */
 
 .submenu-m {
     position: relative;
@@ -53,33 +61,73 @@ body {
 .submenu {
     position: absolute;
     display: none;
+    left: -1px;
+    padding: 25px 0 0 0;
+    background-color: #2c71b8;
+    z-index: 10;
+}
+
+.submenu-m > p {
+    background-image: url(./image/arrow-products-non-active.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute; 
+    top: 23px;
+    left: 122px;
+    width: 10px;
+    height: 7px;
+}
+
+.submenu-m:hover > p {
+    background-image: url(./image/arrow-products-active.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    
 }
 
 .submenu > li {
-    width: 283px;
+    width: 286px;
     height: 40px;
-    background-color: #2c71b8;
-    padding: 12px 0 13px 30px;
 }
 
 .submenu > li > a {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
     color: white;
+    text-decoration: none;
+    font-size: 21px;
+    width: 100%;
+    height: 40px;
+}
+
+.submenu > li:hover > a {
+    background-color: white;
+    color: #2c71b8;
 }
 
 .submenu-m:hover .submenu {
     display: block;
 }
 
+/* End submenu */
+
 .menu > li {
     width: 25%;
     border-left: 1px solid #2c71b8;
+}
+
+.menu > li:hover > a {
+    background-color: #2c71b8;
+    color: white;
 }
 
 .menu li:last-child {
     border-right: 1px solid #2c71b8;
 }
 
-.menu a {
+.menu > li > a {
     display: block;
     height: 50px;
     text-decoration: none;
@@ -103,7 +151,7 @@ body {
     display: flex;
     align-items: center;
     width: 200px;
-    height: 38px;
+    height: 40px;
     border: 1px solid #2c71b8;
     background-color: white;
 }
@@ -133,7 +181,7 @@ body {
     background-color: #2c71b8;
     border-color: transparent;
     position: absolute;
-    left: 165px;
+    left: 164px;
     border: 0px;
     padding: 0;
     cursor: pointer;
@@ -155,4 +203,509 @@ body {
     width: 40px;
     height: 40px;
     background-color: white;
+}
+
+.header-cart {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.header-cart::before {
+    position: absolute;
+    background-image: url(./image/shop-cart-blue.png);
+    content: "";
+    width: 18px;
+    height: 20px;
+    left: 11px;
+    top: 10px;
+}
+
+.product-count {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #2c71b8;
+    top: -10px;
+    left: -10px;
+}
+
+.product-count span {
+    font-weight: 500;
+    font-size: 12px;
+    position: absolute;
+    color: white;
+    top: 4px;
+    left: 7px;
+}
+
+/* End menu of header */
+
+/* Start main*/
+
+.main {
+    height: 2750px;
+    padding-bottom: 80px;
+}
+
+/* Start of slider */
+
+.containerForSlider {
+    border-bottom: 1px solid  rgba(255, 255, 255, 0.75);
+    background-color: rgba(12, 52, 95, 0.4);
+    padding: 0 90px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+ 
+.slider {
+    display: flex;
+    height: 400px;
+    width: 1200px;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+
+} 
+
+.slider div > p {
+    font-size: 100px;
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+    height: 400px;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-next {
+    background-image: url(./image/arrow-slider-right.png);
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 1233px;
+    top: 275px;
+}
+
+.slider-prev {
+    background-image: url(./image/arrow-slider-left.png);
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 90px;
+    top: 275px;
+}
+
+.boxForSq {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 460px;
+    left: 46.3%;
+}
+
+.slider-square-1 {
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    background-color: white;
+}
+
+.slider-square-2 {
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+}
+
+.slider-square-3 {
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+}
+
+.slider-square-4 {
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+}
+
+/* Start of main */
+
+.containerForMenuOptAndContent {
+    display: flex;
+    width: 1200px;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    height: fit-content;
+}
+
+/* Start of aside menu (with options) */
+
+.asideMenu {
+    width: 23%;
+    padding: 30px 10px 30px 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-right: 1px solid white;
+}
+
+.option {
+    margin-bottom: 60px;
+}
+
+.option > h3 {
+    font-size: 21px;
+    font-weight: 400;
+    color: white;
+}
+
+/* Stylization checkbox */
+
+.checkbox {
+    margin-top: 30px;
+}
+
+.checkbox input {
+	z-index: -1;
+	opacity: 0;
+} 
+
+.checkbox-text {
+	position: relative;
+	padding-left: 30px;
+	cursor: pointer;
+    color: white;
+    font-size: 21px;
+    font-weight: 100;
+    width: max-content;
+}
+
+.checkbox-text:before {
+	content: "";
+	position: absolute;
+	top: 5px;
+	left: 0;
+	width: 10px;
+	height: 10px;
+	background: transparent;
+    border: 1px solid white;
+	transition: .2s;
+} 
+
+.checkbox input:checked + .checkbox-text:before {
+	background: white;
+}
+
+/* End of stylization */
+
+.more-det {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 21px;
+    font-weight: 300;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.btnForAsMen {
+    border: 0;
+    padding: 0;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.btnForAsMen:hover div {
+    border: 1px solid #2c71b8;
+    background-color: white;
+    color:#2c71b8;
+}
+
+.btnForAsMen div {
+    width: 210px;
+    height: 50px;
+    border: 1px solid white;
+    background-color: #2c71b8;
+    color: white;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 50px;
+}
+
+/* End of aside menu */
+
+/* Start fill`s container with content (Content) */
+
+/* Start of main-header*/
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Start of navigation panel */
+
+.content {
+    width: 77%;
+    height: 165px;
+}
+
+.navOnsite {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+/* End of navigation panel */
+
+/* Start of name a section and sort option */
+
+.nameOfSectAndSort {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    height: 70px;
+}
+
+.nameOfSectAndSort h2 {
+    font-size: 48px;
+    font-size: 700;
+    color: white;
+}
+
+.sortOption {
+    width: 270px;
+    height: 40px;
+    background-color: #2c71b8;
+    border: 1px solid white;
+    padding: 0 15px 0 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 21px;
+    font-weight: 100;
+    color: white;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.sortOption::-ms-expand {
+    display: none;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::before {
+    background-image: url(./image/arrow-sort.png);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 25%;
+    right: 15px;
+    width: 13px;
+    height: 8px;
+}
+ 
+
+/* Start content section with products */
+
+.content-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 25px 0 30px 30px;
+}
+
+.item {
+    width: 270px;
+    height: 650px;
+    border: 1px solid white;
+}
+
+.item-image {
+    position: relative;
+    height: 27.6%; 
+    width: 100%;  
+    background-image: url(./image/sticks.png);
+    border-bottom: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.incrSize {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #2c71b8;
+    background-image: url(./image/increaseSize.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: 77%;
+    left: 83%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.favor {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #2c71b8;
+    background-image: url(./image/hart.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 6px;
+    bottom: 54%;
+    left: 83%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.incrSize:focus {
+    background-image: url(./image/increaseSizeActive.png); 
+    background-color: #2c71b8;
+}
+
+.favor:focus {
+    background-image: url(./image/hartActive.png); 
+    background-color: #2c71b8;
+}
+
+.item-details {
+    height: 72.3%;
+    padding: 15px 15px;
+    background-color: rgb(44, 113, 184, 0.8);
+}
+
+.item-name {
+    font-size: 30px;
+    font-weight: 500;  
+    color: white;
+    line-height: 1.2;
+}
+
+.item-descr {
+    font-size: 21px;
+    font-weight: 300;  
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.item-char {
+    font-size: 21px;
+    font-weight: 500;  
+    color: white;
+    line-height: 1.2;
+    margin-right: 5px;
+}
+
+.item-details p {
+    margin-left: 5px;
+    font-size: 21px;
+    font-weight: 300;  
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.prize {
+    font-size: 48px;
+    font-weight: 500;  
+    color: white;
+    line-height: 1.2;
+    position: relative;
+    margin-left: 45px;
+    margin-bottom: 10px;
+}
+
+.square-number {
+    position: absolute;
+    font-size: 28px;
+    font-weight: 500;
+    top: 2px;
+    left: 117px;
+}
+
+.moreDetails {
+    width: 210px;
+    height: 50px;
+    border: 1px solid white;
+    background-color: #2c71b8;
+    color: white;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 50px;
+    margin: 0 0 15px 15px;
+    cursor: pointer;
+}
+
+.btnToCart {
+    width: 210px;
+    height: 50px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 50px;
+    margin-left: 15px;
+    cursor: pointer;
+    background-image: url(./image/shopp-cart-white.png);
+    background-size: 15px 17px;
+    background-repeat: no-repeat;
+    background-position: top 16px right 10px;
+} 
+
+.moreDetails:hover {
+    border: 1px solid #2c71b8;
+    background-color: white;
+    color: #2c71b8;
+}
+
+.btnToCart:hover {
+    border: 1px solid #2c71b8;
+    background-color: white;
+    color: #2c71b8;
+    background-image: url(./image/shop-cart-blue.png);
+}
+
+.loadMore {
+    font-size: 36px;
+    font-weight: 300;
+    margin: 40px 0 10px 0;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Finally end */
+
+.footer {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.footer P {
+    color: #2c71b8;
+    font-size: 21px;
+    font-weight: 100;
 }
