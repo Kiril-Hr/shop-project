@@ -21,53 +21,53 @@ document.querySelector('.slider-prev').addEventListener('click', () => {
     slider.style.left = -offset + 'px';
 });
 
-document.querySelector('.slider-next').addEventListener('click',function sliderSq(offset) {
-    if (offset = 0) {
-        sliderSq1.style.backgroundColor = "white";
-        sliderSq2.style.backgroundColor = "transparent";
-        sliderSq3.style.backgroundColor = "transparent";
-        sliderSq4.style.backgroundColor = "transparent";
-    }
-    if (offset = 1200) {
-        sliderSq1.style.backgroundColor = "transparent";
-        sliderSq2.style.backgroundColor = "white";
-    }
-    if (offset = 2400) {
-        sliderSq1.style.backgroundColor = "transparent";
-        sliderSq2.style.backgroundColor = "transparent";
-        sliderSq3.style.backgroundColor = "white";
-    }
-    if (offset = 3600) {
-        sliderSq1.style.backgroundColor = "transparent";
-        sliderSq2.style.backgroundColor = "transparent";
-        sliderSq3.style.backgroundColor = "transparent";
-        sliderSq4.style.backgroundColor = "white";
-    }
-});
+// document.querySelector('.slider-next').addEventListener('click',function sliderSq(offset) {
+//     if (offset = 0) {
+//         sliderSq1.style.backgroundColor = "white";
+//         sliderSq2.style.backgroundColor = "transparent";
+//         sliderSq3.style.backgroundColor = "transparent";
+//         sliderSq4.style.backgroundColor = "transparent";
+//     }
+//     if (offset = 1200) {
+//         sliderSq1.style.backgroundColor = "transparent";
+//         sliderSq2.style.backgroundColor = "white";
+//     }
+//     if (offset = 2400) {
+//         sliderSq1.style.backgroundColor = "transparent";
+//         sliderSq2.style.backgroundColor = "transparent";
+//         sliderSq3.style.backgroundColor = "white";
+//     }
+//     if (offset = 3600) {
+//         sliderSq1.style.backgroundColor = "transparent";
+//         sliderSq2.style.backgroundColor = "transparent";
+//         sliderSq3.style.backgroundColor = "transparent";
+//         sliderSq4.style.backgroundColor = "white";
+//     }
+// });
 
-document.querySelector('.slider-prev').addEventListener('click',function sliderSq(offset) {
-    if (offset = 0) {
-        sliderSq1.style.backgroundColor = "white";
-        sliderSq2.style.backgroundColor = "transparent";
-        sliderSq3.style.backgroundColor = "transparent";
-        sliderSq4.style.backgroundColor = "transparent";
-    }
-    if (offset = 1200) {
-        sliderSq1.style.backgroundColor = "transparent";
-        sliderSq2.style.backgroundColor = "white";
-    }
-    if (offset = 2400) {
-        sliderSq1.style.backgroundColor = "transparent";
-        sliderSq2.style.backgroundColor = "transparent";
-        sliderSq3.style.backgroundColor = "white";
-    }
-    if (offset = 3600) {
-        sliderSq1.style.backgroundColor = "transparent";
-        sliderSq2.style.backgroundColor = "transparent";
-        sliderSq3.style.backgroundColor = "transparent";
-        sliderSq4.style.backgroundColor = "white";
-    }
-});
+// document.querySelector('.slider-prev').addEventListener('click',function sliderSq(offset) {
+//     if (offset = 0) {
+//         sliderSq1.style.backgroundColor = "white";
+//         sliderSq2.style.backgroundColor = "transparent";
+//         sliderSq3.style.backgroundColor = "transparent";
+//         sliderSq4.style.backgroundColor = "transparent";
+//     }
+//     if (offset = 1200) {
+//         sliderSq1.style.backgroundColor = "transparent";
+//         sliderSq2.style.backgroundColor = "white";
+//     }
+//     if (offset = 2400) {
+//         sliderSq1.style.backgroundColor = "transparent";
+//         sliderSq2.style.backgroundColor = "transparent";
+//         sliderSq3.style.backgroundColor = "white";
+//     }
+//     if (offset = 3600) {
+//         sliderSq1.style.backgroundColor = "transparent";
+//         sliderSq2.style.backgroundColor = "transparent";
+//         sliderSq3.style.backgroundColor = "transparent";
+//         sliderSq4.style.backgroundColor = "white";
+//     }
+// });
 
 
 

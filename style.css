@@ -405,7 +405,7 @@ body {
 	background: white;
 }
 
-/* End of stylization */
+/* End of stylization checkbox*/
 
 .more-det {
     display: flex;
@@ -464,6 +464,20 @@ body {
     height: 70px;
     align-items: center;
     padding: 15px 30px;
+}
+
+.navOnsite a {
+    color: #96B8DC;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.navOnsite span {
+    font-size: 14px;
+    position: relative;
+    color: #96B8DC;
+    top: 1px;
+    margin: 0 1px;
 }
 
 /* End of navigation panel */
