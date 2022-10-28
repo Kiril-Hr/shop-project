@@ -9,7 +9,7 @@ body {
 
 /* Start main details of header */
 
-.container {
+.containerOfHeader {
     width: 1200px;
     max-width: 1200px;
     padding: 0 15px;
@@ -248,37 +248,47 @@ body {
 /* Start main*/
 
 .main {
-    height: 2750px;
+    height: fit-content;
     padding-bottom: 80px;
+}
+
+.containerOfMain {
+    width: 1200px;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
 }
 
 /* Start of slider */
 
 .containerForSlider {
+    display: flex;
+    justify-content: center;
+}
+
+.slider {
     border-bottom: 1px solid  rgba(255, 255, 255, 0.75);
     background-color: rgba(12, 52, 95, 0.4);
     padding: 0 90px;
-    margin: 0 auto;
     overflow: hidden;
 }
- 
-.slider {
+
+.slider-line {
     display: flex;
-    height: 400px;
-    width: 1200px;
+    width: 100%;
     position: relative;
     left: 0;
     transition: all ease 1s;
+    margin: 0 auto; 
+}
 
-} 
-
-.slider div > p {
+.slider-line div > p {
     font-size: 100px;
     text-decoration: none;
     color: white;
     font-weight: 100;
     height: 400px;
-    width: 1200px;
+    width: 1170px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -304,13 +314,21 @@ body {
     top: 275px;
 }
 
+/* Box with square switching of sliders */
+
+.sq-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .boxForSq {
     width: 100px;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
     position: absolute;
     top: 460px;
-    left: 46.3%;
+    left: 46.25%;
 }
 
 .slider-square-1 {
@@ -353,6 +371,7 @@ body {
 
 .asideMenu {
     width: 23%;
+    height: fit-content;
     padding: 30px 10px 30px 30px;
     background-color: rgba(255, 255, 255, 0.2);
     border-right: 1px solid white;
@@ -445,19 +464,21 @@ body {
 
 /* Start fill`s container with content (Content) */
 
+/* Start content section*/
+
+.content {
+    width: 77%;
+}
+
 /* Start of main-header*/
 
 .main-header {
     display: flex;
     flex-direction: column;
+    height: 165px;
 }
 
 /* Start of navigation panel */
-
-.content {
-    width: 77%;
-    height: 165px;
-}
 
 .navOnsite {
     display: flex;
@@ -497,7 +518,7 @@ body {
     color: white;
 }
 
-.sortOption {
+.dropdownBtn {
     width: 270px;
     height: 40px;
     background-color: #2c71b8;
@@ -512,17 +533,53 @@ body {
     appearance: none;
     outline: none;
     cursor: pointer;
+    position: relative;
+    text-align: left;
 }
 
-.sortOption::-ms-expand {
+.dropdownBtn::-ms-expand {
     display: none;
 }
 
-.select-wrapper {
+.dropDownList {
+    display: none;
+    position: absolute;
+    background-color: #2c71b8;
+    z-index: 10;
+    width: 100%;
+    border: 1px solid white;
+    top: 39px;
+}
+
+.dropDownList--visible {
+    display: block;
+}
+
+.inputForDrop {
+    display: none;
+}
+
+.dropDownListItem {
+    height: 40px;
+    color: white;
+    padding: 0 15px 0 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 21px;
+    font-weight: 100;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.dropDownListItem:hover {
+    background-color: white;
+    color: #2c71b8;
+}
+
+.dropdownWrapper {
     position: relative;
 }
 
-.select-wrapper::before {
+.dropdownWrapper::before {
     background-image: url(./image/arrow-sort.png);
     content: "";
     display: block;
@@ -531,9 +588,9 @@ body {
     right: 15px;
     width: 13px;
     height: 8px;
+    z-index: 10;
 }
  
-
 /* Start content section with products */
 
 .content-items {
@@ -590,15 +647,40 @@ body {
     cursor: pointer;
 }
 
-.incrSize:focus {
+.incrSize:hover {
     background-image: url(./image/increaseSizeActive.png); 
     background-color: #2c71b8;
 }
 
-.favor:focus {
+/* Increase image to vp */
+
+.incrImage {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgb(27 29 31 / 70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: all 0.3s ease-in-out;
+    z-index: 15;
+}
+
+.incrImage--visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.favor--visible {
     background-image: url(./image/hartActive.png); 
     background-color: #2c71b8;
 }
+
+/* End of increase */
 
 .item-details {
     height: 72.3%;
