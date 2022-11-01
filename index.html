@@ -14,8 +14,13 @@
 <body>
     
     <header class="header">
-        <div class="container">
+        <div class="containerOfHeader">
             <div class="row">
+
+                <div class="hbMenu">
+                    <span></span>
+                </div>
+
                 <div class="col-3">
                     <div class="logo">
                         <a href="#"><img src="image/logo.png" alt="logo"></a>
@@ -24,23 +29,25 @@
                 <div class="col-6">
                     <nav>
                         <ul class="menu">
-                            <li><a href="#">Home</a></li>
+                            <li><a href="index.html">Home</a></li>
                             <li class="submenu-m">
-                                <a href="#">Products</a>
+                                <a>Products</a>
                                 <p></p>
                                 <ul class="submenu">
-                                    <li><a href="#">Smartphone</a></li>
-                                    <li><a href="#">TV</a></li>
-                                    <li><a href="#">Laptops and Tablets</a></li>
-                                    <li><a href="#">Desktop</a></li>
-                                    <li><a href="#">Other tech</a></li>
+                                    <li><a href="index.html">Smartphone</a></li>
+                                    <li><a href="index.html">TV</a></li>
+                                    <li><a href="index.html">Laptops and Tablets</a></li>
+                                    <li><a href="index.html">Desktop</a></li>
+                                    <li><a href="index.html">Other tech</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Payment</a></li>
-                            <li><a href="#">Shipping</a></li>
+                            <li><a href="index.html">Payment</a></li>
+                            <li><a href="index.html">Shipping</a></li>
                         </ul>
                     </nav>
                 </div>
+
+                <div class="searchBtn"></div>
 
                 <div class="col-3 d-flex">
                     <form method="get" class="header-search">
@@ -57,245 +64,261 @@
         </div>
     </header>
 
-    <main class="main">
+    <div class="containerForBackGr">
         <div class="containerForSlider">
+
             <div class="slider">
-                <div>
-                    <p>Slide #1</p> 
+                <div class="slider-line">
+                    <div><p>Slide #1</p></div>
+                    <div><p>Slide #2</p></div>
+                    <div><p>Slide #3</p></div>
+                    <div><p>Slide #4</p></div>
                 </div>
-                <div>
-                    <p>Slide #2</p> 
-                </div>
-                <div>
-                    <p>Slide #3</p> 
-                </div>
-                <div>
-                    <p>Slide #4</p> 
-                </div>
-            </div>
 
-            <div class="boxForSq">
-                <div class="slider-square-1"></div>
-                <div class="slider-square-2"></div>
-                <div class="slider-square-3"></div>
-                <div class="slider-square-4"></div>
+                <div class="slider-prev"></div>
+                <div class="slider-next"></div>
+
+                <div class="sq-wrapper">
+                    <div class="boxForSq">
+                        <div class="slider-square"></div>
+                        <div class="slider-square"></div>
+                        <div class="slider-square"></div>
+                        <div class="slider-square"></div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="slider-prev"></div>
-            <div class="slider-next"></div>
         </div>
+    </div>
 
-        <div class="containerForMenuOptAndContent">
-            <div class="asideMenu">
-                <div class="menu-op">
-                    <div class="option">
-                        <h3>DEVICE TYPE</h3>
-                        <label class="checkbox"><input type="checkbox" name="Laptop"><div class="checkbox-text">Laptop</div></label>
-                        <label class="checkbox"><input type="checkbox" name="Tablet"><div class="checkbox-text">Tablet</div></label>
+    <main class="main">
+        <div class="containerOfMain">
+            <div class="containerForMenuOptAndContent">
+                <div class="asideMenu">
+                    <div class="menu-op">
+                        <div class="option">
+                            <h3>DEVICE TYPE</h3>
+                            <input type="checkbox" name="Laptop" id="laptop">
+                            <label class="checkbox" for="laptop">Laptop</label>
+                            <input type="checkbox" name="Tablet" id="tablet">
+                            <label class="checkbox" for="tablet">Tablet</label>
+                        </div>
+                        <div class="option">
+                            <h3>COLOR</h3>
+                            <input type="checkbox" name="Black" id="black">
+                            <label class="checkbox" for="black">Black</label>
+                            <input type="checkbox" name="Green" id="green">
+                            <label class="checkbox" for="green">Green</label>
+                            <input type="checkbox" name="Blue" id="Blue">
+                            <label class="checkbox" for="Blue">Blue</label>
+                            <input type="checkbox" name="Red" id="Red">
+                            <label class="checkbox" for="Red">Red</label>
+                            <input type="checkbox" name="Orange" id="Orange">
+                            <label class="checkbox" for="Orange">Orange</label>
+                        </div>
+                        <div class="option">
+                            <h3>RAM</h3>
+                            <input type="checkbox" name="1GB" id="1GB">
+                            <label class="checkbox" for="1GB">1GB</label>
+                            <input type="checkbox" name="2GB" id="2GB">
+                            <label class="checkbox" for="2GB">2GB</label>
+                            <input type="checkbox" name="4GB" id="4GB">
+                            <label class="checkbox" for="4GB">4GB</label>
+                            <input type="checkbox" name="8GB" id="8GB">
+                            <label class="checkbox" for="8GB">8GB</label>
+                            <input type="checkbox" name="16GB" id="16GB">
+                            <label class="checkbox" for="16GB">16GB</label>
+                        </div>
                     </div>
-                    <div class="option">
-                        <h3>COLOR</h3>
-                        <label class="checkbox"><input type="checkbox" name="Black"><div class="checkbox-text">Black</div></label>
-                        <label class="checkbox"><input type="checkbox" name="Green"><div class="checkbox-text">Green</div></label>
-                        <label class="checkbox"><input type="checkbox" name="Blue"><div class="checkbox-text">Blue</div></label>
-                        <label class="checkbox"><input type="checkbox" name="Red"><div class="checkbox-text">Red</div></label>
-                        <label class="checkbox"><input type="checkbox" name="Orange"><div class="checkbox-text">Orange</div></label>
-                    </div>
-                    <div class="option">
-                        <h3>RAM</h3>
-                        <label class="checkbox"><input type="checkbox" name="1GB"><div class="checkbox-text">1GB</div></label>
-                        <label class="checkbox"><input type="checkbox" name="2GB"><div class="checkbox-text">2GB</div></label>
-                        <label class="checkbox"><input type="checkbox" name="4GB"><div class="checkbox-text">4GB</div></label>
-                        <label class="checkbox"><input type="checkbox" name="8GB"><div class="checkbox-text">8GB</div></label>
-                        <label class="checkbox"><input type="checkbox" name="16GB"><div class="checkbox-text">16GB</div></label>
-                    </div>
+
+                    <div class="more-det">Show more details ...</div>
+                    <button type="submit" class="btnForAsMen"><div>SUBMIT</div></button>
+
                 </div>
 
-                <div class="more-det">Show more details ...</div>
-                <button type="submit" class="btnForAsMen"><div>SUBMIT</div></button>
+                <div class="content">
+                    <div class="main-header">
+                        <div class="navOnsite">
+                            <nav>
+                                <a href="index1.html">Home page</a> <span>></span> 
+                                <a href="index2.html">Products</a> <span>></span> 
+                                <a href="index.html">Laptops and Tablets</a>
+                            </nav>
+                        </div>
 
-            </div>
-
-            <div class="content">
-                <div class="main-header">
-                    <div class="navOnsite">
-                        <p>Home-page</p>
-                    </div>
-
-                    <div class="nameOfSectAndSort">
-                        <h2>Laptops and Tablets</h2>
-                        <div class="select-wrapper">
-                            <div class="forArrow">
-                                <select name="Sort" id="SortBy" class="sortOption">
-                                    <option value="price">sort by price</option>
-                                    <option value="name">sort by name</option>
-                                    <option value="popularity">sort by popularity</option>
-                                    <option value="date">sort by date</option>
-                                </select>
+                        <div class="nameOfSectAndSort">
+                            <h2>Laptops and Tablets</h2>
+                            <div class="dropdownWrapper">
+                                <div class="dropdown">
+                                    <button class="dropdownBtn">sort by name</button>
+                                    <ul class="dropDownList">
+                                        <li class="dropDownListItem" data-value="prize">sort by prize</li>
+                                        <li class="dropDownListItem" data-value="popularity">sort by popularity</li>
+                                        <li class="dropDownListItem" data-value="date">sort by date</li>
+                                    </ul>
+                                    <input type="text" name="sort-method" value="" class="inputForDrop">
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                </div>
+                    <div class="content-items">
+                        <div class="item">
+                            <div class="item-image">
+                                <img src="./image/screen.png" alt="screen">
+                                <button class="incrSize"></button>
+                                <button class="favor"></button>
+                            </div>
+                            <div class="item-details">
+                                <h4 class="item-name">#1 Device name</h4>
+                                <p class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p><span class="item-char">TYPE:</span>Laptop</p>
+                                <p><span class="item-char">SCREEN SIZE:</span>7 inches</p>
+                                <p><span class="item-char">RAM:</span>1GB</p>
+                                <div class="prize">$599<span class="square-number">25</span></div>
+                                <button class="moreDetails">MORE DETAILS</button>
+                                <button class="btnToCart">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-image">
+                                <img src="./image/screen.png" alt="screen">
+                                <button class="incrSize"></button>
+                                <button class="favor"></button>
+                            </div>
+                            <div class="item-details">
+                                <h4 class="item-name">#1 Device name</h4>
+                                <p class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p><span class="item-char">TYPE:</span>Laptop</p>
+                                <p><span class="item-char">SCREEN SIZE:</span>7 inches</p>
+                                <p><span class="item-char">RAM:</span>1GB</p>
+                                <div class="prize">$599<span class="square-number">25</span></div>
+                                <button class="moreDetails">MORE DETAILS</button>
+                                <button class="btnToCart">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-image">
+                                <img src="./image/screen.png" alt="screen">
+                                <button class="incrSize"></button>
+                                <button class="favor"></button>
+                            </div>
+                            <div class="item-details">
+                                <h4 class="item-name">#1 Device name</h4>
+                                <p class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p><span class="item-char">TYPE:</span>Laptop</p>
+                                <p><span class="item-char">SCREEN SIZE:</span>7 inches</p>
+                                <p><span class="item-char">RAM:</span>1GB</p>
+                                <div class="prize">$599<span class="square-number">25</span></div>
+                                <button class="moreDetails">MORE DETAILS</button>
+                                <button class="btnToCart">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-image">
+                                <img src="./image/screen.png" alt="screen">
+                                <button class="incrSize"></button>
+                                <button class="favor"></button>
+                            </div>
+                            <div class="item-details">
+                                <h4 class="item-name">#1 Device name</h4>
+                                <p class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p><span class="item-char">TYPE:</span>Laptop</p>
+                                <p><span class="item-char">SCREEN SIZE:</span>7 inches</p>
+                                <p><span class="item-char">RAM:</span>1GB</p>
+                                <div class="prize">$599<span class="square-number">25</span></div>
+                                <button class="moreDetails">MORE DETAILS</button>
+                                <button class="btnToCart">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-image">
+                                <img src="./image/screen.png" alt="screen">
+                                <button class="incrSize"></button>
+                                <button class="favor"></button>
+                            </div>
+                            <div class="item-details">
+                                <h4 class="item-name">#1 Device name</h4>
+                                <p class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p><span class="item-char">TYPE:</span>Laptop</p>
+                                <p><span class="item-char">SCREEN SIZE:</span>7 inches</p>
+                                <p><span class="item-char">RAM:</span>1GB</p>
+                                <div class="prize">$599<span class="square-number">25</span></div>
+                                <button class="moreDetails">MORE DETAILS</button>
+                                <button class="btnToCart">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-image">
+                                <img src="./image/screen.png" alt="screen">
+                                <button class="incrSize"></button>
+                                <button class="favor"></button>
+                            </div>
+                            <div class="item-details">
+                                <h4 class="item-name">#1 Device name</h4>
+                                <p class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p><span class="item-char">TYPE:</span>Laptop</p>
+                                <p><span class="item-char">SCREEN SIZE:</span>7 inches</p>
+                                <p><span class="item-char">RAM:</span>1GB</p>
+                                <div class="prize">$599<span class="square-number">25</span></div>
+                                <button class="moreDetails">MORE DETAILS</button>
+                                <button class="btnToCart">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-image">
+                                <img src="./image/screen.png" alt="screen">
+                                <button class="incrSize"></button>
+                                <button class="favor"></button>
+                            </div>
+                            <div class="item-details">
+                                <h4 class="item-name">#1 Device name</h4>
+                                <p class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p><span class="item-char">TYPE:</span>Laptop</p>
+                                <p><span class="item-char">SCREEN SIZE:</span>7 inches</p>
+                                <p><span class="item-char">RAM:</span>1GB</p>
+                                <div class="prize">$599<span class="square-number">25</span></div>
+                                <button class="moreDetails">MORE DETAILS</button>
+                                <button class="btnToCart">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-image">
+                                <img src="./image/screen.png" alt="screen">
+                                <button class="incrSize"></button>
+                                <button class="favor"></button>
+                            </div>
+                            <div class="item-details">
+                                <h4 class="item-name">#1 Device name</h4>
+                                <p class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p><span class="item-char">TYPE:</span>Laptop</p>
+                                <p><span class="item-char">SCREEN SIZE:</span>7 inches</p>
+                                <p><span class="item-char">RAM:</span>1GB</p>
+                                <div class="prize">$599<span class="square-number">25</span></div>
+                                <button class="moreDetails">MORE DETAILS</button>
+                                <button class="btnToCart">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-image">
+                                <img src="./image/screen.png" alt="screen">
+                                <button class="incrSize"></button>
+                                <button class="favor"></button>
+                            </div>
+                            <div class="item-details">
+                                <h4 class="item-name">#1 Device name</h4>
+                                <p class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p><span class="item-char">TYPE:</span>Laptop</p>
+                                <p><span class="item-char">SCREEN SIZE:</span>7 inches</p>
+                                <p><span class="item-char">RAM:</span>1GB</p>
+                                <div class="prize">$599<span class="square-number">25</span></div>
+                                <button class="moreDetails">MORE DETAILS</button>
+                                <button class="btnToCart">ADD TO CART</button>
+                            </div>
+                        </div>
 
-               
-                <div class="content-items">
-                    <div class="item">
-                        <div class="item-image">
-                            <img src="./image/screen.png" alt="screen">
-                            <button class="incrSize"></button>
-                            <button class="favor"></button>
-                        </div>
-                        <div class="item-details">
-                            <h4 class="item-name">#1 Device name</h4>
-                            <p class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p><span class="item-char">TYPE:</span>Laptop</p>
-                            <p><span class="item-char">SCREEN SIZE:</span>7 inches</p>
-                            <p><span class="item-char">RAM:</span>1GB</p>
-                            <div class="prize">$599<span class="square-number">25</span></div>
-                            <button class="moreDetails">MORE DETAILS</button>
-                            <button class="btnToCart">ADD TO CART</button>
-                        </div>
                     </div>
-                    <div class="item">
-                        <div class="item-image">
-                            <img src="./image/screen.png" alt="screen">
-                            <button class="incrSize"></button>
-                            <button class="favor"></button>
-                        </div>
-                        <div class="item-details">
-                            <h4 class="item-name">#1 Device name</h4>
-                            <p class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p><span class="item-char">TYPE:</span>Laptop</p>
-                            <p><span class="item-char">SCREEN SIZE:</span>7 inches</p>
-                            <p><span class="item-char">RAM:</span>1GB</p>
-                            <div class="prize">$599<span class="square-number">25</span></div>
-                            <button class="moreDetails">MORE DETAILS</button>
-                            <button class="btnToCart">ADD TO CART</button>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item-image">
-                            <img src="./image/screen.png" alt="screen">
-                            <button class="incrSize"></button>
-                            <button class="favor"></button>
-                        </div>
-                        <div class="item-details">
-                            <h4 class="item-name">#1 Device name</h4>
-                            <p class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p><span class="item-char">TYPE:</span>Laptop</p>
-                            <p><span class="item-char">SCREEN SIZE:</span>7 inches</p>
-                            <p><span class="item-char">RAM:</span>1GB</p>
-                            <div class="prize">$599<span class="square-number">25</span></div>
-                            <button class="moreDetails">MORE DETAILS</button>
-                            <button class="btnToCart">ADD TO CART</button>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item-image">
-                            <img src="./image/screen.png" alt="screen">
-                            <button class="incrSize"></button>
-                            <button class="favor"></button>
-                        </div>
-                        <div class="item-details">
-                            <h4 class="item-name">#1 Device name</h4>
-                            <p class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p><span class="item-char">TYPE:</span>Laptop</p>
-                            <p><span class="item-char">SCREEN SIZE:</span>7 inches</p>
-                            <p><span class="item-char">RAM:</span>1GB</p>
-                            <div class="prize">$599<span class="square-number">25</span></div>
-                            <button class="moreDetails">MORE DETAILS</button>
-                            <button class="btnToCart">ADD TO CART</button>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item-image">
-                            <img src="./image/screen.png" alt="screen">
-                            <button class="incrSize"></button>
-                            <button class="favor"></button>
-                        </div>
-                        <div class="item-details">
-                            <h4 class="item-name">#1 Device name</h4>
-                            <p class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p><span class="item-char">TYPE:</span>Laptop</p>
-                            <p><span class="item-char">SCREEN SIZE:</span>7 inches</p>
-                            <p><span class="item-char">RAM:</span>1GB</p>
-                            <div class="prize">$599<span class="square-number">25</span></div>
-                            <button class="moreDetails">MORE DETAILS</button>
-                            <button class="btnToCart">ADD TO CART</button>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item-image">
-                            <img src="./image/screen.png" alt="screen">
-                            <button class="incrSize"></button>
-                            <button class="favor"></button>
-                        </div>
-                        <div class="item-details">
-                            <h4 class="item-name">#1 Device name</h4>
-                            <p class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p><span class="item-char">TYPE:</span>Laptop</p>
-                            <p><span class="item-char">SCREEN SIZE:</span>7 inches</p>
-                            <p><span class="item-char">RAM:</span>1GB</p>
-                            <div class="prize">$599<span class="square-number">25</span></div>
-                            <button class="moreDetails">MORE DETAILS</button>
-                            <button class="btnToCart">ADD TO CART</button>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item-image">
-                            <img src="./image/screen.png" alt="screen">
-                            <button class="incrSize"></button>
-                            <button class="favor"></button>
-                        </div>
-                        <div class="item-details">
-                            <h4 class="item-name">#1 Device name</h4>
-                            <p class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p><span class="item-char">TYPE:</span>Laptop</p>
-                            <p><span class="item-char">SCREEN SIZE:</span>7 inches</p>
-                            <p><span class="item-char">RAM:</span>1GB</p>
-                            <div class="prize">$599<span class="square-number">25</span></div>
-                            <button class="moreDetails">MORE DETAILS</button>
-                            <button class="btnToCart">ADD TO CART</button>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item-image">
-                            <img src="./image/screen.png" alt="screen">
-                            <button class="incrSize"></button>
-                            <button class="favor"></button>
-                        </div>
-                        <div class="item-details">
-                            <h4 class="item-name">#1 Device name</h4>
-                            <p class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p><span class="item-char">TYPE:</span>Laptop</p>
-                            <p><span class="item-char">SCREEN SIZE:</span>7 inches</p>
-                            <p><span class="item-char">RAM:</span>1GB</p>
-                            <div class="prize">$599<span class="square-number">25</span></div>
-                            <button class="moreDetails">MORE DETAILS</button>
-                            <button class="btnToCart">ADD TO CART</button>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="item-image">
-                            <img src="./image/screen.png" alt="screen">
-                            <button class="incrSize"></button>
-                            <button class="favor"></button>
-                        </div>
-                        <div class="item-details">
-                            <h4 class="item-name">#1 Device name</h4>
-                            <p class="item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p><span class="item-char">TYPE:</span>Laptop</p>
-                            <p><span class="item-char">SCREEN SIZE:</span>7 inches</p>
-                            <p><span class="item-char">RAM:</span>1GB</p>
-                            <div class="prize">$599<span class="square-number">25</span></div>
-                            <button class="moreDetails">MORE DETAILS</button>
-                            <button class="btnToCart">ADD TO CART</button>
-                        </div>
-                    </div>
-
+                    <p class="loadMore">Load more ...</p>
                 </div>
-                <p class="loadMore">Load more ...</p>
             </div>
         </div>
     </main>
