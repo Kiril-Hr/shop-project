@@ -926,15 +926,13 @@ input:checked + label:before {
     }
 
     .menu li {
-        border-left: 1px solid #2c71b8;
-        border-right: 1px solid #2c71b8;
+        border: 0;
         width: 250px;
         height: 50px;
     }
 
     .menu li:last-child {
-        border-left: 1px solid #2c71b8;
-        border-right: 1px solid #2c71b8;    
+        border: 0; 
         margin-bottom: 0;
     }
 
@@ -1142,13 +1140,13 @@ input:checked + label:before {
     }
 
     .submenu {
-        left: -100px;
+        left: -98px;
         top: -52px;
         width: 250px;
     }
     
     .submenu > li > a {
-        width: 248px;
+        width: 250px;
     }
 
 }
