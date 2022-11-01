@@ -93,17 +93,17 @@ const favor = document.querySelectorAll(".favor").forEach((favor) => {
 
 // IncrImage
 
-const incrImage = "incrImage";
-const incrImageVis = "incrImage--visible";
+// const incrImage = "incrImage";
+// const incrImageVis = "incrImage--visible";
 
-const incrSize = document.querySelectorAll(".incrSize").forEach((incrSize) => {
-  incrSize.addEventListener("click", () => {
-    incrImage.classList.add("incrImage--visible");
-    incrImage.addEventListener("click", () => {
-      incrImage.classList.remove("incrImage--visible");
-    });
-  });
-});
+// const incrSize = document.querySelectorAll(".incrSize").forEach((incrSize) => {
+//   incrSize.addEventListener("click", () => {
+//     incrImage.classList.add("incrImage--visible");
+//     incrImage.addEventListener("click", () => {
+//       incrImage.classList.remove("incrImage--visible");
+//     });
+//   });
+// });
 
 // HbMenu
 
