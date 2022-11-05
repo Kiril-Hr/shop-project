@@ -8,6 +8,36 @@ if (window.NodeList && !NodeList.prototype.forEach) {
   };
 }
 
+// squareSwitch
+// const square1 = document.querySelector(".slider-square1");
+// const square2 = document.querySelector(".slider-square2");
+// const square3 = document.querySelector(".slider-square3");
+// const square4 = document.querySelector(".slider-square4");
+
+// const squareSwitcher = (count) => {
+//   if (count === 0) {
+//     square2.classList.remove("active-square");
+//     square3.classList.remove("active-square");
+//     square4.classList.remove("active-square");
+//     square1.classList.add("active-square");
+//   } else if (count === 1) {
+//     square1.classList.remove("active-square");
+//     square3.classList.remove("active-square");
+//     square4.classList.remove("active-square");
+//     square2.classList.add("active-square");
+//   } else if (count === 2) {
+//     square1.classList.remove("active-square");
+//     square2.classList.remove("active-square");
+//     square4.classList.remove("active-square");
+//     square3.classList.add("active-square");
+//   } else if (count === 3) {
+//     square1.classList.remove("active-square");
+//     square2.classList.remove("active-square");
+//     square3.classList.remove("active-square");
+//     square4.classList.add("active-square");
+//   }
+// };
+
 // Slider
 
 const dives = document.querySelectorAll(".slider .slider-line div");
@@ -30,19 +60,19 @@ init();
 window.addEventListener("resize", init);
 
 document.querySelector(".slider-next").addEventListener("click", function () {
-  count++;
+  const countInc = count++;
   if (count >= dives.length) {
     count = 0;
   }
-  rollSlider();
+  rollSlider(countInc);
 });
 
 document.querySelector(".slider-prev").addEventListener("click", function () {
-  count--;
+  const countDec = count--;
   if (count < 0) {
     count = dives.length - 1;
   }
-  rollSlider();
+  rollSlider(countDec);
 });
 
 function rollSlider() {
@@ -98,9 +128,7 @@ const favor = document.querySelectorAll(".favor").forEach((favor) => {
 
 // const incrSize = document.querySelectorAll(".incrSize").forEach((incrSize) => {
 //   incrSize.addEventListener("click", () => {
-//     incrImage.classList.add("incrImage--visible");
-//     incrImage.addEventListener("click", () => {
-//       incrImage.classList.remove("incrImage--visible");
+//     incrImage.classList.toggle("incrImage--visible");
 //     });
 //   });
 // });
