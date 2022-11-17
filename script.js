@@ -8,36 +8,6 @@ if (window.NodeList && !NodeList.prototype.forEach) {
   };
 }
 
-// squareSwitch
-// const square1 = document.querySelector(".slider-square1");
-// const square2 = document.querySelector(".slider-square2");
-// const square3 = document.querySelector(".slider-square3");
-// const square4 = document.querySelector(".slider-square4");
-
-// const squareSwitcher = (count) => {
-//   if (count === 0) {
-//     square2.classList.remove("active-square");
-//     square3.classList.remove("active-square");
-//     square4.classList.remove("active-square");
-//     square1.classList.add("active-square");
-//   } else if (count === 1) {
-//     square1.classList.remove("active-square");
-//     square3.classList.remove("active-square");
-//     square4.classList.remove("active-square");
-//     square2.classList.add("active-square");
-//   } else if (count === 2) {
-//     square1.classList.remove("active-square");
-//     square2.classList.remove("active-square");
-//     square4.classList.remove("active-square");
-//     square3.classList.add("active-square");
-//   } else if (count === 3) {
-//     square1.classList.remove("active-square");
-//     square2.classList.remove("active-square");
-//     square3.classList.remove("active-square");
-//     square4.classList.add("active-square");
-//   }
-// };
-
 // Slider
 
 const dives = document.querySelectorAll(".slider .slider-line div");
@@ -120,18 +90,6 @@ const favor = document.querySelectorAll(".favor").forEach((favor) => {
     favor.classList.toggle("favor--visible");
   });
 });
-
-// IncrImage
-
-// const incrImage = "incrImage";
-// const incrImageVis = "incrImage--visible";
-
-// const incrSize = document.querySelectorAll(".incrSize").forEach((incrSize) => {
-//   incrSize.addEventListener("click", () => {
-//     incrImage.classList.toggle("incrImage--visible");
-//     });
-//   });
-// });
 
 // HbMenu
 
