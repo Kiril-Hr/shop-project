@@ -166,3 +166,5 @@ const removeModalAfterScrollAndClose = () => {
 document.addEventListener("scroll", showModalAfterScroll);
 
 modalCloseBtn.addEventListener("click", removeModalAfterScrollAndClose);
+
+document.addEventListener("click", removeModalAfterScrollAndClose);
