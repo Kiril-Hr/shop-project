@@ -1209,3 +1209,91 @@ input:checked + label:before {
     }
 
 }
+
+.modal-form {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    display: none;
+    z-index: 50;
+}
+.active-modal {
+    display: block;
+}
+.container-modal-form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 15px;
+    width: 250px;
+    height: 250px;
+    border: 1px solid white;
+    background: rgba(0,0,0,0.75);
+    margin: auto;
+    top: 25%;
+}
+.container-modal-form p {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 15px;
+    margin-bottom: 20px;
+    letter-spacing: 0.3px;
+}
+.btn-close-modal {
+    align-self: flex-end;
+    margin-bottom: 20px;
+    color: white;
+    cursor: pointer;
+}
+.email, 
+.name {
+    border: 1px solid #0f365c;
+    width: 100%;
+    height: 25px;
+    outline: none;
+    color: #0f365c;
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 12px;
+    letter-spacing: 0.3px;
+    padding: 3px 5px;
+}
+.email::placeholder,
+.send,
+.email,
+.name,
+.name::placeholder {
+    color: black;
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 12px;
+    letter-spacing: 0.3px;
+}
+.name {
+    margin-bottom: 10px;
+}
+.email {
+    margin-bottom: 35px;
+}
+.send {
+    border: 1px solid white;
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    background: rgba(0,0,0,0.75);
+    color: white;
+    text-transform: uppercase;
+}
+.send:hover {
+    background: rgb(255, 255, 255, 0.5);
+    border: 1px solid black;
+    color: black;
+}

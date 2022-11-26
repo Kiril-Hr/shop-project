@@ -109,3 +109,60 @@ const headerSearch = document.querySelector(".header-search");
 searchBtn.addEventListener("click", () => {
   headerSearch.classList.toggle("active-search");
 });
+// cart
+const productCount = document.querySelector("#product-count");
+const btnToCart = document.querySelectorAll(".btnToCart");
+
+btnToCart.forEach((item) => {
+  item.addEventListener("click", () => {
+    let numberOfCarts = +productCount.innerText;
+    if (numberOfCarts < 9 && numberOfCarts <= 98) {
+      productCount.innerText = numberOfCarts + 1;
+    } else if (numberOfCarts >= 9 && numberOfCarts <= 98) {
+      productCount.innerText = numberOfCarts + 1;
+      productCount.style.left = "3.5px";
+    } else {
+      productCount.innerText = 99;
+      productCount.style.left = "3.5px";
+    }
+  });
+});
+// modal-form
+const moreDetails = document.querySelectorAll(".moreDetails");
+const modalForm = document.querySelector(".modal-form");
+const modalCloseBtn = document.querySelector(".btn-close-modal");
+const modalContainer = document.querySelector(".container-modal-form");
+
+moreDetails.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    e.stopPropagation();
+    modalForm.classList.add("active-modal");
+  });
+});
+
+modalCloseBtn.addEventListener("click", () => {
+  modalForm.classList.remove("active-modal");
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target !== modalContainer) {
+    modalForm.classList.remove("active-modal");
+  }
+});
+const showModalAfterScroll = () => {
+  if (window.pageYOffset >= document.body.scrollHeight / 2) {
+    modalForm.classList.add("active-modal");
+  }
+};
+const removeModalAfterScrollAndClose = () => {
+  if (
+    !modalForm.classList.contains("active-modal") &&
+    window.pageYOffset >= document.body.scrollHeight / 2
+  ) {
+    document.removeEventListener("scroll", showModalAfterScroll);
+  }
+};
+
+document.addEventListener("scroll", showModalAfterScroll);
+
+modalCloseBtn.addEventListener("click", removeModalAfterScrollAndClose);
