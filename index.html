@@ -56,7 +56,7 @@
                     </form>
 
                     <div class="header-cart">
-                        <div class="product-count"><span>2</span></div>
+                        <div class="product-count"><span id="product-count">0</span></div>
                     </div>
                 </div>
                 
@@ -326,6 +326,18 @@
     <footer class="footer">
         <p>© Dyno14_98</p>
     </footer>
+
+    <div class="modal-form">
+        <div class="container-modal-form">
+            <div class="btn-close-modal">x</div>
+            <p>Leave your contacts to receive more details</p>
+            <form method="post" class="form-modal">
+                <input type="text" placeholder="your name" class="name" required>
+                <input type="email" placeholder="your email" class="email" required>
+                <button type="submit" class="send">Send</button>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
