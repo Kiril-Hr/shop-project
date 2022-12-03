@@ -130,8 +130,14 @@ btnToCart.forEach((item) => {
 // modal-form
 const moreDetails = document.querySelectorAll(".moreDetails");
 const modalForm = document.querySelector(".modal-form");
+const formModal = document.querySelector(".form-modal");
+const formModalInputEmail = document.querySelector(".name");
+const formModalInputName = document.querySelector(".email");
 const modalCloseBtn = document.querySelector(".btn-close-modal");
 const modalContainer = document.querySelector(".container-modal-form");
+const modalContainerParagraph = document.querySelector(
+  ".container-modal-form p"
+);
 
 moreDetails.forEach((item) => {
   item.addEventListener("click", (e) => {
@@ -145,12 +151,18 @@ modalCloseBtn.addEventListener("click", () => {
 });
 
 document.addEventListener("click", (e) => {
-  if (e.target !== modalContainer) {
+  if (
+    e.target !== modalContainer &&
+    e.target !== formModal &&
+    e.target !== formModalInputEmail &&
+    e.target !== formModalInputName &&
+    e.target !== modalContainerParagraph
+  ) {
     modalForm.classList.remove("active-modal");
   }
 });
 const showModalAfterScroll = () => {
-  if (window.pageYOffset >= document.body.scrollHeight / 2) {
+  if (window.scrollY >= document.body.scrollHeight / 2) {
     modalForm.classList.add("active-modal");
   }
 };
@@ -168,3 +180,60 @@ document.addEventListener("scroll", showModalAfterScroll);
 modalCloseBtn.addEventListener("click", removeModalAfterScrollAndClose);
 
 document.addEventListener("click", removeModalAfterScrollAndClose);
+// product-quantity
+
+const productQty = document.querySelectorAll(".product-quantity");
+let decrement = document.querySelectorAll(".decrement");
+let increment = document.querySelectorAll(".increment");
+let inputField = document.querySelectorAll(".product-quantity input");
+
+// increment.forEach((item, i) => {
+//   item.addEventListener("click", () => {
+//     let currentValue = +inputField[i].value;
+//     inputField[i].value = currentValue + 1;
+//   });
+// });
+
+// decrement.forEach((item, i) => {
+//   item.addEventListener("click", () => {
+//     let currentValue = +inputField[i].value;
+//     inputField[i].value = currentValue - 1;
+//   });
+// });
+
+function Count(increment, decrement, inputField, minCount = 1, maxCount = 10) {
+  this.domRefs = {
+    increment,
+    decrement,
+    inputField,
+  };
+  this.toggleButtonState = () => {
+    let count = this.domRefs.inputField.value;
+    this.domRefs.decrement.disabled = count <= minCount;
+    this.domRefs.increment.disabled = count >= maxCount;
+  };
+  this.toggleButtonState();
+
+  this.incrementFunc = () => {
+    let currentCount = +this.domRefs.inputField.value;
+    this.domRefs.inputField.value = currentCount + 1;
+    this.toggleButtonState();
+  };
+  this.decrementFunc = () => {
+    let currentCount = +this.domRefs.inputField.value;
+    this.domRefs.inputField.value = currentCount - 1;
+    this.toggleButtonState();
+  };
+  this.domRefs.increment.addEventListener(
+    "click",
+    this.incrementFunc.bind(this.domRefs)
+  );
+  this.domRefs.decrement.addEventListener(
+    "click",
+    this.decrementFunc.bind(this.domRefs)
+  );
+}
+
+for (let i = 0; i < productQty.length; i++) {
+  const count = new Count(increment[i], decrement[i], inputField[i]);
+}
